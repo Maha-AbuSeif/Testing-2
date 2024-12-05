@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
    arg=$1
    res=eligible
    res1=not-eligible
@@ -21,14 +23,20 @@
 	
     get)
         read -p " enter the name of the user you want to see their result: " name
-        grep $name -i file.log | cut -d: -f1,4 
+        if (grep $name -i file.log )
+        then
+             echo $( cut -d: -f1 )
+        else 
+              echo " not found "
+        fi
     ;;
 	
     list)
         cut -d: -f1,4  file.log
 	;; 
-   *)  break;;   
+    *)  echo "wrong input" ;;   
    esac 
 
 
-echo "wrong input" 
+
+
