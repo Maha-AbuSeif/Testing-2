@@ -23,12 +23,7 @@
 	
     get)
         read -p " enter the name of the user you want to see their result: " name
-        if (grep $name -i file.log )
-        then
-             echo $( cut -d: -f1 )
-        else 
-              echo " not found "
-        fi
+        grep $name -i file.log | cut -d: -f1,4
     ;;
 	
     list)
