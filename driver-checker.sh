@@ -1,6 +1,5 @@
 #!/bin/bash
 
-do 
    arg=$1
    res=eligible
    res1=not-eligible
