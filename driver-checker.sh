@@ -1,6 +1,5 @@
 #!/bin/bash
 
-while true 
 do 
    arg=$1
    res=eligible
@@ -32,6 +31,5 @@ do
    *)  break;;   
    esac 
 
-done 
 
 echo "wrong input" 
