@@ -22,15 +22,15 @@ do
 	   ;;
 	
     get)
-      read -p " enter the name of the user you want to see their result: " name
-      grep $name -i file.log | cut -d: -f1,4 
+        read -p " enter the name of the user you want to see their result: " name
+        grep $name -i file.log | cut -d: -f1,4 
     ;;
 	
-list)
-    cut -d: -f1,4  file.log
+    list)
+        cut -d: -f1,4  file.log
 	;; 
-*)  break;;   
-esac 
+   *)  break;;   
+   esac 
 
 done 
 
